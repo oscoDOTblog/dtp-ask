@@ -18,7 +18,7 @@ Copy `.env.example` to `.env.local` and provide:
 - `APP_PASSWORD`: the password used to unlock the deployed app.
 - `SESSION_SECRET`: a random value of at least 24 characters used to sign session cookies.
 
-Run the full Vercel environment locally with `vercel dev`, or run the client alone with `npm run dev`. The client-only server cannot execute `/api` routes.
+Run the complete app locally with `npm run dev`. Vite mounts the same `/api/session` and `/api/evaluate` handlers used by Vercel, and prints the configured room password in its startup output. If `APP_PASSWORD` is omitted locally, the temporary development password is `practice-room`. Production builds do not print or use this fallback.
 
 ## Vercel deployment
 

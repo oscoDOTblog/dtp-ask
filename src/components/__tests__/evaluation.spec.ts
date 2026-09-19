@@ -1,5 +1,10 @@
 import { afterEach, describe, expect, it } from 'vitest'
-import { answerEvaluationSchema, evaluationInput } from '../../../api/_lib/evaluation'
+import {
+  answerEvaluationSchema,
+  evaluationInput,
+  evaluationInstructions,
+  technicalEvaluationInstructions,
+} from '../../../api/_lib/evaluation'
 import { createSessionToken, isAuthorized } from '../../../api/_lib/auth'
 import type { VercelRequest } from '@vercel/node'
 
@@ -37,6 +42,23 @@ describe('server contracts', () => {
     expect(input).toContain('Career arc')
     expect(input).toContain('45 seconds')
     expect(input).toContain('My answer.')
+    expect(input).toContain('EXPECTED STORY BEATS')
+    expect(evaluationInstructions).toContain('ownership 15%')
+    const technical = evaluationInput(
+      {
+        question: 'What is a closure?',
+        expectedBeats: ['Lexical scope'],
+        followUp: 'Example?',
+        transcript: 'A function retains scope.',
+        durationSeconds: 30,
+      },
+      true,
+    )
+    expect(technical).toContain('EXPECTED TECHNICAL POINTS')
+    expect(technicalEvaluationInstructions).toContain('factual correctness')
+    expect(technicalEvaluationInstructions).toContain(
+      'do not penalize the answer for being concise',
+    )
   })
   it('accepts a valid signed session and rejects tampering', () => {
     process.env.SESSION_SECRET = 'a-test-secret-that-is-long-enough'

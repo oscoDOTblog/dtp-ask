@@ -20,4 +20,46 @@ describe('interview practice', () => {
     cy.contains('h2', 'Compare your answer with the guide')
     cy.contains('No AI score')
   })
+
+  it('opens the settings study guide and filters the full question bank', () => {
+    cy.intercept('GET', '/api/session', { authenticated: true, aiAvailable: false })
+    cy.visit('/')
+    cy.contains('a', 'Settings').click()
+    cy.contains('h1', 'Shape the session.')
+    cy.contains('80 shown')
+    cy.get('input[type="search"]').type('idempotency')
+    cy.contains('Design an API between a transaction UI and its backend.')
+    cy.get('#session-size').select('10')
+    cy.window().should((win) => {
+      const saved = JSON.parse(win.localStorage.getItem('interview-room.practice.v1') || '{}')
+      if (saved.preferences?.sessionSize !== 10) {
+        throw new Error('Session-size preference has not persisted yet')
+      }
+    })
+  })
+
+  it('shows technical cards in the category and study guide with readable code', () => {
+    cy.intercept('GET', '/api/session', { authenticated: true, aiAvailable: false })
+    cy.visit('/')
+    cy.contains('button', 'Technical fundamentals').click()
+    cy.contains('1 / 5')
+    cy.contains('Fundamentals')
+    cy.contains('button', 'All questions').click()
+    cy.contains('a', 'Settings').click()
+    cy.get('select[aria-label="Filter by category"]').select('technical-fundamentals')
+    cy.contains('60 shown')
+    cy.get('input[type="search"]').type('What prints?')
+    cy.contains('1 shown')
+    cy.get('.study-card .question-code').first().should('contain.text', 'console.log')
+  })
+
+  it('includes the new category in mixed practice', () => {
+    cy.intercept('GET', '/api/session', { authenticated: true, aiAvailable: false })
+    cy.visit('/')
+    cy.contains('a', 'Settings').click()
+    cy.get('#session-size').select('all')
+    cy.contains('a', 'Back to practice').click()
+    cy.contains('button', 'Start mixed practice').click()
+    cy.contains('1 / 80')
+  })
 })

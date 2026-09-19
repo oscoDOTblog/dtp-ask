@@ -12,6 +12,11 @@ export const emptyPracticeState = (): PracticeState => ({
   attempts: [],
   selfReviews: [],
   lastCategory: 'mixed',
+  preferences: {
+    sessionSize: 5,
+    shuffleQuestions: true,
+    showTimeTargets: true,
+  },
 })
 
 export function loadPracticeState(storage: Storage = localStorage): PracticeState {
@@ -26,6 +31,10 @@ export function loadPracticeState(storage: Storage = localStorage): PracticeStat
         typeof parsed.lastCategory === 'string'
           ? parsed.lastCategory
           : emptyPracticeState().lastCategory,
+      preferences: {
+        ...emptyPracticeState().preferences,
+        ...parsed.preferences,
+      },
     } as PracticeState
   } catch {
     return emptyPracticeState()

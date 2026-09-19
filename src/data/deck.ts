@@ -1,4 +1,5 @@
 import type { Category, InterviewCard } from '@/types/interview'
+import { technicalFundamentalsCards } from '@/data/technicalFundamentals'
 
 export const categories: Category[] = [
   {
@@ -42,6 +43,13 @@ export const categories: Category[] = [
     shortName: 'Team fit',
     description: 'Show transferable fluency without pretending every framework is identical.',
     accent: '#d0f06f',
+  },
+  {
+    id: 'technical-fundamentals',
+    name: 'Technical fundamentals',
+    shortName: 'Fundamentals',
+    description: 'Build fast recall across JavaScript, Vue, browsers, APIs, and payments.',
+    accent: '#e4a8ff',
   },
 ]
 
@@ -382,6 +390,7 @@ export const interviewCards: InterviewCard[] = [
       'I would avoid assuming Apple made one company-wide framework choice. For this team, Vue may fit an architecture where the browser is intentionally a client of independently owned APIs and services. Next.js is a broader full-stack React framework whose server rendering, server components, and integrated deployment model are valuable when those solve the product’s needs. An authenticated payments application may benefit more from explicit client-service boundaries than SEO or framework-owned backend behavior. The choice may also reflect mature components, accessibility tooling, build pipelines, and operational knowledge. In a long-lived financial system, replacing a working ecosystem because another framework is popular is rarely a compelling trade.',
     followUp: 'Under what conditions would Next.js become the better choice?',
   },
+  ...technicalFundamentalsCards,
 ]
 
 export function categoryFor(card: InterviewCard) {

@@ -5,6 +5,7 @@ export const categoryIds = [
   'reliability',
   'architecture',
   'team-fit',
+  'technical-fundamentals',
 ] as const
 
 export type CategoryId = (typeof categoryIds)[number]
@@ -28,6 +29,7 @@ export interface InterviewCard {
   keyBeats: string[]
   sampleResponse: string
   followUp: string
+  codeExample?: string
   placeholders?: string[]
 }
 
@@ -69,4 +71,11 @@ export interface PracticeState {
   attempts: Attempt[]
   selfReviews: SelfReview[]
   lastCategory: CategoryId | 'mixed'
+  preferences: PracticePreferences
+}
+
+export interface PracticePreferences {
+  sessionSize: 5 | 10 | 'all'
+  shuffleQuestions: boolean
+  showTimeTargets: boolean
 }

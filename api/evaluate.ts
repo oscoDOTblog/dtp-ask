@@ -6,6 +6,7 @@ import {
   answerEvaluationSchema,
   evaluationInput,
   evaluationInstructions,
+  technicalEvaluationInstructions,
 } from './_lib/evaluation.js'
 
 const MAX_AUDIO_BYTES = 4 * 1024 * 1024
@@ -53,6 +54,7 @@ async function parseInput(request: VercelRequest, openai: OpenAI) {
     return {
       transcript: typeof body.transcript === 'string' ? body.transcript.trim() : '',
       question: typeof body.question === 'string' ? body.question : '',
+      category: typeof body.category === 'string' ? body.category : '',
       expectedBeats: Array.isArray(body.expectedBeats) ? body.expectedBeats : [],
       followUp: typeof body.followUp === 'string' ? body.followUp : '',
       durationSeconds: Number(body.durationSeconds),
@@ -83,6 +85,7 @@ async function parseInput(request: VercelRequest, openai: OpenAI) {
   return {
     transcript: transcription.text.trim(),
     question: String(form.get('question') ?? ''),
+    category: String(form.get('category') ?? ''),
     expectedBeats: JSON.parse(String(form.get('expectedBeats') ?? '[]')) as unknown,
     followUp: String(form.get('followUp') ?? ''),
     durationSeconds,
@@ -94,6 +97,19 @@ function validateInput(input: Awaited<ReturnType<typeof parseInput>>) {
     throw new Error('INVALID_TRANSCRIPT')
   }
   if (!input.question || input.question.length > 500) throw new Error('INVALID_QUESTION')
+  if (
+    input.category &&
+    ![
+      'story',
+      'product',
+      'collaboration',
+      'reliability',
+      'architecture',
+      'team-fit',
+      'technical-fundamentals',
+    ].includes(input.category)
+  )
+    throw new Error('INVALID_CATEGORY')
   if (
     !Array.isArray(input.expectedBeats) ||
     input.expectedBeats.some((beat) => typeof beat !== 'string') ||
@@ -144,11 +160,17 @@ export default async function handler(request: VercelRequest, response: VercelRe
       model: 'gpt-5-mini',
       store: false,
       max_output_tokens: 1600,
-      instructions: evaluationInstructions,
-      input: evaluationInput({
-        ...input,
-        expectedBeats: input.expectedBeats as string[],
-      }),
+      instructions:
+        input.category === 'technical-fundamentals'
+          ? technicalEvaluationInstructions
+          : evaluationInstructions,
+      input: evaluationInput(
+        {
+          ...input,
+          expectedBeats: input.expectedBeats as string[],
+        },
+        input.category === 'technical-fundamentals',
+      ),
       text: { format: zodTextFormat(answerEvaluationSchema, 'answer_evaluation') },
     })
 

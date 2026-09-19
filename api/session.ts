@@ -27,7 +27,9 @@ export default function handler(request: VercelRequest, response: VercelResponse
     return response.status(405).json({ error: 'Method not allowed.' })
   }
 
-  const expected = process.env.APP_PASSWORD
+  const expected =
+    process.env.APP_PASSWORD ||
+    (process.env.NODE_ENV !== 'production' ? 'practice-room' : undefined)
   if (!expected) return response.status(503).json({ error: 'App password is not configured.' })
 
   const password = typeof request.body?.password === 'string' ? request.body.password : ''

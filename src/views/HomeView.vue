@@ -145,11 +145,17 @@ function shuffle<T>(items: T[]) {
 
 function startSession(category: CategoryId | 'mixed') {
   practiceState.value.lastCategory = category
-  sessionCards.value = shuffle(
+  const availableCards =
     category === 'mixed'
       ? interviewCards
-      : interviewCards.filter((card) => card.category === category),
-  )
+      : interviewCards.filter((card) => card.category === category)
+  const orderedCards = practiceState.value.preferences.shuffleQuestions
+    ? shuffle(availableCards)
+    : [...availableCards]
+  sessionCards.value =
+    practiceState.value.preferences.sessionSize === 'all'
+      ? orderedCards
+      : orderedCards.slice(0, practiceState.value.preferences.sessionSize)
   openCard(0)
   screen.value = 'practice'
 }
@@ -284,7 +290,13 @@ async function submitRecording() {
   const form = new FormData()
   const extension = blob.type.includes('mp4') ? 'm4a' : blob.type.includes('ogg') ? 'ogg' : 'webm'
   form.append('audio', blob, `answer.${extension}`)
-  form.append('question', activeCard.value.question)
+  form.append(
+    'question',
+    activeCard.value.codeExample
+      ? `${activeCard.value.question}\n${activeCard.value.codeExample}`
+      : activeCard.value.question,
+  )
+  form.append('category', activeCard.value.category)
   form.append('expectedBeats', JSON.stringify(activeCard.value.keyBeats))
   form.append('followUp', activeCard.value.followUp)
   form.append('durationSeconds', String(Math.max(1, elapsedSeconds.value)))
@@ -297,7 +309,10 @@ async function regradeTranscript() {
   await requestEvaluation(
     {
       transcript: transcript.value.trim(),
-      question: activeCard.value.question,
+      question: activeCard.value.codeExample
+        ? `${activeCard.value.question}\n${activeCard.value.codeExample}`
+        : activeCard.value.question,
+      category: activeCard.value.category,
       expectedBeats: activeCard.value.keyBeats,
       followUp: activeCard.value.followUp,
       durationSeconds: duration,
@@ -436,6 +451,7 @@ function formatDate(value: string) {
       <div class="topbar-actions">
         <span class="privacy-pill"
           ><i></i>{{ aiAvailable ? 'Audio never saved' : 'Self-review mode' }}</span
+        ><RouterLink class="text-button" to="/settings">Settings</RouterLink
         ><button class="text-button" @click="logOut">Lock room</button>
       </div>
     </header>
@@ -544,10 +560,15 @@ function formatDate(value: string) {
       <section v-if="activeCard" class="practice-stage">
         <article class="question-card">
           <div class="question-meta">
-            <span>{{ activeCard.suggestedSeconds }} sec target</span
+            <span v-if="practiceState.preferences.showTimeTargets"
+              >{{ activeCard.suggestedSeconds }} sec target</span
             ><span>{{ activeCategory?.shortName }}</span>
           </div>
           <h1 tabindex="-1">{{ activeCard.question }}</h1>
+          <pre
+            v-if="activeCard.codeExample"
+            class="question-code"
+          ><code>{{ activeCard.codeExample }}</code></pre>
           <p class="prompt-note">Take a breath. Lead with the point, then earn it with evidence.</p>
           <div v-if="!currentAttempt && !selfReview" class="recording-zone">
             <div v-if="recording || selfTiming" class="recording-live" aria-live="polite">
@@ -718,7 +739,11 @@ function formatDate(value: string) {
                   class="rubric-item"
                 >
                   <div>
-                    <span>{{ name }}</span
+                    <span>{{
+                      activeCard.category === 'technical-fundamentals' && name === 'ownership'
+                        ? 'reasoning'
+                        : name
+                    }}</span
                     ><strong>{{ dimension.score }}/5</strong>
                   </div>
                   <p>{{ dimension.justification }}</p>

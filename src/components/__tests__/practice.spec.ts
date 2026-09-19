@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { interviewCards } from '@/data/deck'
+import { categories, interviewCards } from '@/data/deck'
 import {
   emptyPracticeState,
   loadPracticeState,
@@ -40,10 +40,18 @@ const attempt: Attempt = {
 
 describe('practice state', () => {
   beforeEach(() => localStorage.clear())
-  it('contains the complete six-category, twenty-question deck', () => {
-    expect(interviewCards).toHaveLength(20)
-    expect(new Set(interviewCards.map((card) => card.category)).size).toBe(6)
+  it('contains seven categories and eighty uniquely identified questions', () => {
+    expect(categories).toHaveLength(7)
+    expect(interviewCards).toHaveLength(80)
+    expect(new Set(interviewCards.map((card) => card.id)).size).toBe(80)
+    expect(
+      interviewCards.filter((card) => card.category === 'technical-fundamentals'),
+    ).toHaveLength(60)
+    expect(new Set(interviewCards.map((card) => card.category)).size).toBe(7)
     expect(interviewCards.every((card) => card.keyBeats.length >= 3)).toBe(true)
+    expect(
+      interviewCards.find((card) => card.id === 'technical-event-loop-output')?.codeExample,
+    ).toContain('setTimeout')
   })
   it('restores valid attempts and survives malformed storage', () => {
     const state = { ...emptyPracticeState(), attempts: [attempt] }
