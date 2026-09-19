@@ -1,70 +1,32 @@
-# dtp-ask
+# Interview Room
 
-This template should help get you started developing with Vue 3 in Vite.
+A private, AI-assisted interview practice app for Apple Wallet, Payments & Commerce preparation. It includes 20 spoken-answer prompts, transcript-based coaching, confidence tracking, and local-only practice history.
 
-## Recommended IDE Setup
+## Local setup
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+Use Node `^22.18.0` or `>=24.12.0`, then install dependencies:
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+Copy `.env.example` to `.env.local` and provide:
+
+- `OPENAI_API_KEY`: optional; enables transcription and AI coaching. Without it, the app
+  automatically uses timed self-review with expected beats, sample responses, and confidence
+  tracking.
+- `APP_PASSWORD`: the password used to unlock the deployed app.
+- `SESSION_SECRET`: a random value of at least 24 characters used to sign session cookies.
+
+Run the full Vercel environment locally with `vercel dev`, or run the client alone with `npm run dev`. The client-only server cannot execute `/api` routes.
+
+## Vercel deployment
+
+Import the repository as a Vite project and add all three environment variables in Vercel project settings. Do not use a `VITE_` prefix for secrets. Audio is processed in memory and discarded after transcription; transcripts and feedback are saved only in the browser's local storage.
+
+## Verification
 
 ```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
+npm run test:unit -- --run
 npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
-
-```sh
-npm run test:e2e:dev
-```
-
-This runs the end-to-end tests against the Vite development server.
-It is much faster than the production build.
-
-But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
-
-```sh
-npm run build
-npm run test:e2e
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```
