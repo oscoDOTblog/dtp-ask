@@ -624,7 +624,18 @@ function formatDate(value: string) {
               <div>
                 <h3>Did you cover these beats?</h3>
                 <ul class="check-list">
-                  <li v-for="beat in activeCard.keyBeats" :key="beat">{{ beat }}</li>
+                  <li v-for="(beat, index) in activeCard.keyBeats" :key="beat">
+                    <details class="beat-detail">
+                      <summary>{{ beat }}</summary>
+                      <p v-if="activeCard.beatDetails?.[index]">
+                        {{ activeCard.beatDetails[index] }}
+                      </p>
+                      <div v-else>
+                        <span>From the reference answer</span>
+                        <p>{{ activeCard.sampleResponse }}</p>
+                      </div>
+                    </details>
+                  </li>
                 </ul>
               </div>
               <div class="follow-up-callout">

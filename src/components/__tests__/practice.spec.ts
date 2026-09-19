@@ -50,6 +50,11 @@ describe('practice state', () => {
     expect(interviewCards.filter((card) => card.category === 'payment-reliability')).toHaveLength(
       15,
     )
+    expect(
+      interviewCards
+        .filter((card) => card.category === 'payment-reliability')
+        .every((card) => card.beatDetails?.length === card.keyBeats.length),
+    ).toBe(true)
     expect(new Set(interviewCards.map((card) => card.category)).size).toBe(8)
     expect(interviewCards.every((card) => card.keyBeats.length >= 3)).toBe(true)
     expect(

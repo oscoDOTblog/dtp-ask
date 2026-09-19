@@ -971,16 +971,44 @@ details summary,
   list-style: none;
 }
 .check-list li {
-  padding: 0.8rem 0 0.8rem 1.8rem;
   border-top: 1px solid var(--mist);
   line-height: 1.45;
 }
-.check-list li::before {
-  float: left;
-  margin-left: -1.8rem;
-  content: '□';
+.beat-detail summary {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.8rem 0;
+  cursor: pointer;
+  list-style: none;
+}
+.beat-detail summary::-webkit-details-marker {
+  display: none;
+}
+.beat-detail summary::before {
+  content: '+';
+  flex: 0 0 1rem;
   color: var(--blue);
-  font-size: 1.1rem;
+  font-weight: 700;
+}
+.beat-detail[open] summary::before {
+  content: '−';
+}
+.beat-detail summary:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+.beat-detail p {
+  margin: 0 0 1rem 1.75rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.beat-detail div span {
+  display: block;
+  margin: 0 0 0.35rem 1.75rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 700;
 }
 .self-review-grid .follow-up-callout {
   margin-top: 0;

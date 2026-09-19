@@ -28,6 +28,7 @@ export interface InterviewCard {
   question: string
   suggestedSeconds: number
   keyBeats: string[]
+  beatDetails?: string[]
   sampleResponse: string
   followUp: string
   codeExample?: string

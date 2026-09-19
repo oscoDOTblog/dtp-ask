@@ -19,6 +19,9 @@ describe('interview practice', () => {
     cy.contains('button', 'Finish & reveal guide').click()
     cy.contains('h2', 'Compare your answer with the guide')
     cy.contains('No AI score')
+    cy.get('.beat-detail summary').first().click()
+    cy.get('.beat-detail').first().should('have.attr', 'open')
+    cy.get('.beat-detail').first().contains('From the reference answer')
   })
 
   it('opens the settings study guide and filters the full question bank', () => {
@@ -76,5 +79,21 @@ describe('interview practice', () => {
     cy.get('input[type="search"]').type('transactional outbox')
     cy.contains('1 shown')
     cy.contains('What problem does a transactional outbox solve in a payment system?')
+  })
+
+  it('expands a payment beat into focused guidance', () => {
+    cy.intercept('GET', '/api/session', { authenticated: true, aiAvailable: false })
+    cy.visit('/')
+    cy.contains('a', 'Settings').click()
+    cy.get('input[role="switch"]').first().uncheck({ force: true })
+    cy.contains('a', 'Back to practice').click()
+    cy.contains('button', 'Payment reliability & incident response').click()
+    cy.contains('h1', 'What should an idempotency key represent in a payment flow?')
+    cy.contains('button', 'Start answer timer').click()
+    cy.contains('button', 'Finish & reveal guide').click()
+    cy.contains('.beat-detail summary', 'One stable key per logical payment intent').click()
+    cy.contains('HTTP attempts are only delivery attempts')
+    cy.contains('.beat-detail summary', 'Persist and enforce it server-side').click()
+    cy.get('.beat-detail[open]').should('have.length', 2)
   })
 })
