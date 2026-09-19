@@ -1,5 +1,6 @@
 import type { Category, InterviewCard } from '@/types/interview'
 import { technicalFundamentalsCards } from '@/data/technicalFundamentals'
+import { paymentReliabilityCards } from '@/data/paymentReliability'
 
 export const categories: Category[] = [
   {
@@ -50,6 +51,13 @@ export const categories: Category[] = [
     shortName: 'Fundamentals',
     description: 'Build fast recall across JavaScript, Vue, browsers, APIs, and payments.',
     accent: '#e4a8ff',
+  },
+  {
+    id: 'payment-reliability',
+    name: 'Payment reliability & incident response',
+    shortName: 'Payments',
+    description: 'Handle ambiguous outcomes, processor degradation, and recovery safely.',
+    accent: '#ff9878',
   },
 ]
 
@@ -391,6 +399,7 @@ export const interviewCards: InterviewCard[] = [
     followUp: 'Under what conditions would Next.js become the better choice?',
   },
   ...technicalFundamentalsCards,
+  ...paymentReliabilityCards,
 ]
 
 export function categoryFor(card: InterviewCard) {

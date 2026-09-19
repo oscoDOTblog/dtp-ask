@@ -740,7 +740,9 @@ function formatDate(value: string) {
                 >
                   <div>
                     <span>{{
-                      activeCard.category === 'technical-fundamentals' && name === 'ownership'
+                      ['technical-fundamentals', 'payment-reliability'].includes(
+                        activeCard.category,
+                      ) && name === 'ownership'
                         ? 'reasoning'
                         : name
                     }}</span

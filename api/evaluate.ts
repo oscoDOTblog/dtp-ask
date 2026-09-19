@@ -7,6 +7,7 @@ import {
   evaluationInput,
   evaluationInstructions,
   technicalEvaluationInstructions,
+  usesTechnicalEvaluation,
 } from './_lib/evaluation.js'
 
 const MAX_AUDIO_BYTES = 4 * 1024 * 1024
@@ -107,6 +108,7 @@ function validateInput(input: Awaited<ReturnType<typeof parseInput>>) {
       'architecture',
       'team-fit',
       'technical-fundamentals',
+      'payment-reliability',
     ].includes(input.category)
   )
     throw new Error('INVALID_CATEGORY')
@@ -160,16 +162,15 @@ export default async function handler(request: VercelRequest, response: VercelRe
       model: 'gpt-5-mini',
       store: false,
       max_output_tokens: 1600,
-      instructions:
-        input.category === 'technical-fundamentals'
-          ? technicalEvaluationInstructions
-          : evaluationInstructions,
+      instructions: usesTechnicalEvaluation(input.category)
+        ? technicalEvaluationInstructions
+        : evaluationInstructions,
       input: evaluationInput(
         {
           ...input,
           expectedBeats: input.expectedBeats as string[],
         },
-        input.category === 'technical-fundamentals',
+        usesTechnicalEvaluation(input.category),
       ),
       text: { format: zodTextFormat(answerEvaluationSchema, 'answer_evaluation') },
     })

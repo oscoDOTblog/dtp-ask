@@ -4,6 +4,7 @@ import {
   evaluationInput,
   evaluationInstructions,
   technicalEvaluationInstructions,
+  usesTechnicalEvaluation,
 } from '../../../api/_lib/evaluation'
 import { createSessionToken, isAuthorized } from '../../../api/_lib/auth'
 import type { VercelRequest } from '@vercel/node'
@@ -59,6 +60,9 @@ describe('server contracts', () => {
     expect(technicalEvaluationInstructions).toContain(
       'do not penalize the answer for being concise',
     )
+    expect(usesTechnicalEvaluation('payment-reliability')).toBe(true)
+    expect(usesTechnicalEvaluation('technical-fundamentals')).toBe(true)
+    expect(usesTechnicalEvaluation('reliability')).toBe(false)
   })
   it('accepts a valid signed session and rejects tampering', () => {
     process.env.SESSION_SECRET = 'a-test-secret-that-is-long-enough'

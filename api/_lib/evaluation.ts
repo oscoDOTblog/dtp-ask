@@ -41,6 +41,10 @@ export const technicalEvaluationInstructions = `You are a precise, encouraging t
 
 Use the existing six score fields as follows: relevance = answers the question; structure = logical sequence when relevant; specificity = correct concrete facts; ownership = independent technical reasoning (displayed as reasoning); judgment = distinctions, caveats, and appropriate tradeoffs; clarity = understandable explanation. For a simple fact question, do not penalize the answer for being concise or for lacking irrelevant tradeoffs. Score each field 1–5 and compute overallScore as a weighted score out of 100: relevance 25%, structure 5%, specificity 25%, ownership/reasoning 20%, judgment 15%, clarity 10%. Keep strengths and the single priority improvement brief. The improved outline should contain recall points, not a replacement script. Do not assess voice quality or confidence.`
 
+export function usesTechnicalEvaluation(category: string) {
+  return category === 'technical-fundamentals' || category === 'payment-reliability'
+}
+
 export function evaluationInput(
   input: {
     question: string

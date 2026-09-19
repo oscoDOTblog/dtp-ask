@@ -40,14 +40,17 @@ const attempt: Attempt = {
 
 describe('practice state', () => {
   beforeEach(() => localStorage.clear())
-  it('contains seven categories and eighty uniquely identified questions', () => {
-    expect(categories).toHaveLength(7)
-    expect(interviewCards).toHaveLength(80)
-    expect(new Set(interviewCards.map((card) => card.id)).size).toBe(80)
+  it('contains eight categories and ninety-five uniquely identified questions', () => {
+    expect(categories).toHaveLength(8)
+    expect(interviewCards).toHaveLength(95)
+    expect(new Set(interviewCards.map((card) => card.id)).size).toBe(95)
     expect(
       interviewCards.filter((card) => card.category === 'technical-fundamentals'),
     ).toHaveLength(60)
-    expect(new Set(interviewCards.map((card) => card.category)).size).toBe(7)
+    expect(interviewCards.filter((card) => card.category === 'payment-reliability')).toHaveLength(
+      15,
+    )
+    expect(new Set(interviewCards.map((card) => card.category)).size).toBe(8)
     expect(interviewCards.every((card) => card.keyBeats.length >= 3)).toBe(true)
     expect(
       interviewCards.find((card) => card.id === 'technical-event-loop-output')?.codeExample,

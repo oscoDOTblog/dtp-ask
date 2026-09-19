@@ -6,6 +6,7 @@ export const categoryIds = [
   'architecture',
   'team-fit',
   'technical-fundamentals',
+  'payment-reliability',
 ] as const
 
 export type CategoryId = (typeof categoryIds)[number]
