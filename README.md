@@ -1,6 +1,6 @@
 # Interview Room
 
-A private, AI-assisted interview practice app for Apple Wallet, Payments & Commerce preparation. It includes 20 spoken-answer prompts, transcript-based coaching, confidence tracking, and local-only practice history.
+A private, AI-assisted interview practice app for rehearsing spoken answers, reviewing feedback, and tracking progress. Practice history stays in your browser.
 
 ## Local setup
 
