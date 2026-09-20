@@ -9,19 +9,6 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 import evaluateHandler from './api/evaluate.js'
 import sessionHandler from './api/session.js'
 
-function roomPasswordOutput(password: string | undefined): Plugin {
-  return {
-    name: 'room-password-output',
-    apply: 'serve',
-    configureServer(server) {
-      server.httpServer?.once('listening', () => {
-        const value = password || 'practice-room'
-        server.config.logger.info(`\n  ➜  Room password: ${value}\n`)
-      })
-    },
-  }
-}
-
 const developmentEnv = loadEnv('development', process.cwd(), '')
 for (const [key, value] of Object.entries(developmentEnv)) process.env[key] ??= value
 
@@ -102,7 +89,6 @@ export default defineConfig({
     vueJsx(),
     vueDevTools(),
     localApi(),
-    roomPasswordOutput(developmentEnv.APP_PASSWORD),
   ],
   resolve: {
     alias: {
