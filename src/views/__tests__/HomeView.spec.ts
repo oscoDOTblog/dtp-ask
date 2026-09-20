@@ -37,4 +37,21 @@ describe('practice navigation', () => {
     expect(next().attributes('disabled')).toBeDefined()
     wrapper.unmount()
   })
+
+  it('starts and stops the answer timer with the spacebar', async () => {
+    const wrapper = mount(HomeView, { global: { stubs: { RouterLink: true } } })
+    await vi.waitFor(() => expect(wrapper.text()).toContain('Start mixed practice'))
+
+    await wrapper.find('.overview-strip button').trigger('click')
+    expect(wrapper.find('.recording-live').exists()).toBe(false)
+
+    window.dispatchEvent(new KeyboardEvent('keydown', { code: 'Space', key: ' ' }))
+    await nextTick()
+    expect(wrapper.find('.recording-live').exists()).toBe(true)
+
+    window.dispatchEvent(new KeyboardEvent('keydown', { code: 'Space', key: ' ' }))
+    await nextTick()
+    expect(wrapper.find('.self-review-panel').exists()).toBe(true)
+    wrapper.unmount()
+  })
 })

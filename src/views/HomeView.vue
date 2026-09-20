@@ -92,8 +92,12 @@ const hasSelfEvaluation = computed(() =>
 )
 
 watch(practiceState, (state) => savePracticeState(state), { deep: true })
-onBeforeUnmount(stopRecorderResources)
+onBeforeUnmount(() => {
+  window.removeEventListener('keydown', handleTimerShortcut)
+  stopRecorderResources()
+})
 onMounted(async () => {
+  window.addEventListener('keydown', handleTimerShortcut)
   try {
     const response = await fetch('/api/session', { credentials: 'same-origin' })
     const body = await response.json()
@@ -202,6 +206,29 @@ function startSelfReview() {
     elapsedSeconds.value += 1
     if (elapsedSeconds.value >= 120) revealSelfReview()
   }, 1000)
+}
+
+function handleTimerShortcut(event: KeyboardEvent) {
+  if (event.code !== 'Space' && event.key !== ' ') return
+  if (event.repeat) return
+  const target = event.target as HTMLElement | null
+  if (
+    target instanceof HTMLElement &&
+    (target instanceof HTMLInputElement ||
+      target instanceof HTMLTextAreaElement ||
+      target instanceof HTMLSelectElement ||
+      target instanceof HTMLButtonElement ||
+      target.isContentEditable)
+  )
+    return
+  if (screen.value !== 'practice' || !activeCard.value) return
+  if (currentAttempt.value || selfReview.value || evaluating.value) return
+  event.preventDefault()
+  if (aiAvailable.value) {
+    if (recording.value) stopRecording()
+    else void startRecording()
+  } else if (selfTiming.value) revealSelfReview()
+  else startSelfReview()
 }
 
 function revealSelfReview() {
@@ -611,6 +638,7 @@ function formatDate(value: string) {
             <p v-if="!aiAvailable" class="working-note">
               No API key detected. Answer aloud; nothing is recorded or uploaded.
             </p>
+            <p class="working-note">Tip: press Space to start or stop.</p>
           </div>
           <p v-if="errorMessage" class="inline-error" role="alert">{{ errorMessage }}</p>
         </article>
