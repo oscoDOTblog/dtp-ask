@@ -31,6 +31,7 @@ export interface InterviewCard {
   beatDetails?: string[]
   sampleResponse: string
   followUp: string
+  followUpAnswer: string
   codeExample?: string
   placeholders?: string[]
 }
@@ -80,4 +81,5 @@ export interface PracticePreferences {
   sessionSize: 5 | 10 | 'all'
   shuffleQuestions: boolean
   showTimeTargets: boolean
+  darkMode: boolean
 }

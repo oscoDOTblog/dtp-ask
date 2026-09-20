@@ -507,7 +507,7 @@ const flashcards: Flashcard[] = [
   ],
 ]
 
-export const technicalFundamentalsCards: InterviewCard[] = flashcards.map(
+export const technicalFundamentalsCards: Omit<InterviewCard, 'followUpAnswer'>[] = flashcards.map(
   ([id, question, sampleResponse, keyBeats, followUp, codeExample]) => ({
     id: `technical-${id}`,
     category: 'technical-fundamentals',

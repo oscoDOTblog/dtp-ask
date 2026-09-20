@@ -16,6 +16,7 @@ export const emptyPracticeState = (): PracticeState => ({
     sessionSize: 5,
     shuffleQuestions: true,
     showTimeTargets: true,
+    darkMode: false,
   },
 })
 

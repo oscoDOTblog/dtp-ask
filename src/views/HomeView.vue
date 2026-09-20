@@ -87,6 +87,9 @@ const timerText = computed(
 const pace = computed(() =>
   currentAttempt.value ? pacingNote(currentAttempt.value.wordsPerMinute) : '',
 )
+const hasSelfEvaluation = computed(() =>
+  Boolean(currentAttempt.value?.confidence || selfReview.value?.confidence),
+)
 
 watch(practiceState, (state) => savePracticeState(state), { deep: true })
 onBeforeUnmount(stopRecorderResources)
@@ -218,6 +221,7 @@ function revealSelfReview() {
 }
 
 function goToNext() {
+  if (!hasSelfEvaluation.value) return
   if (cardIndex.value < sessionCards.value.length - 1) openCard(cardIndex.value + 1)
   else screen.value = 'library'
 }
@@ -641,6 +645,10 @@ function formatDate(value: string) {
               <div class="follow-up-callout">
                 <span>Could you answer the follow-up?</span>
                 <p>{{ activeCard.followUp }}</p>
+                <details class="follow-up-answer">
+                  <summary>Show answer guidance</summary>
+                  <p>{{ activeCard.followUpAnswer }}</p>
+                </details>
               </div>
             </div>
             <div class="sample-section">
@@ -806,7 +814,11 @@ function formatDate(value: string) {
               @click="openCard(cardIndex)"
             >
               Try again</button
-            ><button class="button button--ink button--small" @click="goToNext">
+            ><button
+              class="button button--ink button--small"
+              :disabled="!hasSelfEvaluation"
+              @click="goToNext"
+            >
               {{ cardIndex === sessionCards.length - 1 ? 'Finish session' : 'Next question' }}
             </button>
           </div>

@@ -50,11 +50,13 @@ describe('practice state', () => {
     expect(interviewCards.filter((card) => card.category === 'payment-reliability')).toHaveLength(
       15,
     )
+    expect(interviewCards.every((card) => card.beatDetails?.length === card.keyBeats.length)).toBe(
+      true,
+    )
+    expect(interviewCards[0]?.beatDetails?.[0]).toContain('professional foundation')
     expect(
-      interviewCards
-        .filter((card) => card.category === 'payment-reliability')
-        .every((card) => card.beatDetails?.length === card.keyBeats.length),
-    ).toBe(true)
+      interviewCards.find((card) => card.id === 'payment-idempotency-key')?.beatDetails?.[0],
+    ).toContain('same customer payment attempt')
     expect(new Set(interviewCards.map((card) => card.category)).size).toBe(8)
     expect(interviewCards.every((card) => card.keyBeats.length >= 3)).toBe(true)
     expect(

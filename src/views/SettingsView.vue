@@ -9,6 +9,35 @@ const query = ref('')
 const category = ref<CategoryId | 'all'>('all')
 const showAnswers = ref(true)
 const resetMessage = ref('')
+const beatsDialog = ref<HTMLDialogElement | null>(null)
+const copyMessage = ref('')
+const beatGroups = computed(() =>
+  categories
+    .map((item) => ({
+      ...item,
+      cards: interviewCards.filter((card) => card.category === item.id),
+    }))
+    .filter((item) => item.cards.length),
+)
+const beatCount = computed(() =>
+  interviewCards.reduce((total, card) => total + card.keyBeats.length, 0),
+)
+const beatsExport = computed(() =>
+  beatGroups.value
+    .map((group) =>
+      [
+        group.name,
+        ...group.cards.flatMap((card) => [
+          card.question,
+          ...card.keyBeats.map((beat) => `• ${beat}`),
+          '',
+        ]),
+      ]
+        .join('\n')
+        .trim(),
+    )
+    .join('\n\n'),
+)
 
 const completedIds = computed(
   () =>
@@ -39,6 +68,12 @@ const averageScore = computed(() => {
 })
 
 watch(state, (value) => savePracticeState(value), { deep: true })
+watch(
+  () => state.value.preferences.darkMode,
+  (darkMode) => {
+    document.documentElement.dataset.theme = darkMode ? 'dark' : 'light'
+  },
+)
 
 function resetEverything() {
   if (
@@ -68,6 +103,20 @@ function exportHistory() {
 
 function printGuide() {
   window.print()
+}
+
+function openBeats() {
+  copyMessage.value = ''
+  beatsDialog.value?.showModal()
+}
+
+async function copyBeats() {
+  try {
+    await navigator.clipboard.writeText(beatsExport.value)
+    copyMessage.value = 'Copied all beats to clipboard.'
+  } catch {
+    copyMessage.value = 'Could not copy. Check clipboard access and try again.'
+  }
 }
 </script>
 
@@ -130,6 +179,13 @@ function printGuide() {
             </div>
             <input v-model="state.preferences.showTimeTargets" type="checkbox" role="switch" />
           </label>
+          <label class="setting-row setting-toggle">
+            <div>
+              <span>Dark mode</span>
+              <p>Use a darker appearance across the app.</p>
+            </div>
+            <input v-model="state.preferences.darkMode" type="checkbox" role="switch" />
+          </label>
         </section>
 
         <section class="settings-block" aria-labelledby="data-heading">
@@ -145,6 +201,12 @@ function printGuide() {
               ><strong>Print study guide</strong
               ><small>Print or save the complete question bank as PDF.</small></span
             ><b>Print</b>
+          </button>
+          <button class="utility-row" type="button" @click="openBeats">
+            <span
+              ><strong>Export beats</strong
+              ><small>Review every key beat and copy the list.</small></span
+            ><b>Open</b>
           </button>
           <button class="utility-row utility-row--danger" type="button" @click="resetEverything">
             <span
@@ -212,6 +274,9 @@ function printGuide() {
                 <h4>Sample response</h4>
                 <p>{{ card.sampleResponse }}</p>
                 <p class="study-followup"><strong>Likely follow-up:</strong> {{ card.followUp }}</p>
+                <p class="study-followup">
+                  <strong>Answer guidance:</strong> {{ card.followUpAnswer }}
+                </p>
                 <p v-if="card.placeholders?.length" class="placeholder-note">
                   Personalize: {{ card.placeholders.join(' · ') }}
                 </p>
@@ -222,5 +287,38 @@ function printGuide() {
         <p v-if="!filteredCards.length" class="empty-search">No prompts match that search.</p>
       </section>
     </main>
+
+    <dialog ref="beatsDialog" class="beats-dialog" aria-labelledby="beats-dialog-title">
+      <div class="beats-dialog-header">
+        <div>
+          <p class="context-line">{{ interviewCards.length }} questions · {{ beatCount }} beats</p>
+          <h2 id="beats-dialog-title">Key beats</h2>
+          <p>A compact outline of what to cover in each answer.</p>
+        </div>
+        <button
+          class="beats-dialog-close"
+          type="button"
+          aria-label="Close beats"
+          @click="beatsDialog?.close()"
+        >
+          ×
+        </button>
+      </div>
+      <div class="beats-dialog-list">
+        <section v-for="group in beatGroups" :key="group.id" class="beats-group">
+          <h3>{{ group.name }}</h3>
+          <article v-for="card in group.cards" :key="card.id" class="beats-question">
+            <h4>{{ card.question }}</h4>
+            <ul>
+              <li v-for="beat in card.keyBeats" :key="beat">{{ beat }}</li>
+            </ul>
+          </article>
+        </section>
+      </div>
+      <div class="beats-dialog-footer">
+        <p role="status">{{ copyMessage }}</p>
+        <button class="button button--ink" type="button" @click="copyBeats">Copy all beats</button>
+      </div>
+    </dialog>
   </div>
 </template>

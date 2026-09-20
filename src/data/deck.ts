@@ -1,6 +1,8 @@
 import type { Category, InterviewCard } from '@/types/interview'
 import { technicalFundamentalsCards } from '@/data/technicalFundamentals'
 import { paymentReliabilityCards } from '@/data/paymentReliability'
+import { withFollowUpAnswers } from '@/data/followUpAnswers'
+import { beatDetails } from '@/data/beatDetails'
 
 export const categories: Category[] = [
   {
@@ -61,7 +63,7 @@ export const categories: Category[] = [
   },
 ]
 
-export const interviewCards: InterviewCard[] = [
+export const interviewCards: InterviewCard[] = withFollowUpAnswers([
   {
     id: 'tell-me-about-yourself',
     category: 'story',
@@ -400,7 +402,7 @@ export const interviewCards: InterviewCard[] = [
   },
   ...technicalFundamentalsCards,
   ...paymentReliabilityCards,
-]
+]).map((card) => ({ ...card, beatDetails: beatDetails[card.id] }))
 
 export function categoryFor(card: InterviewCard) {
   return categories.find((category) => category.id === card.category)!

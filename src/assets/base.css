@@ -9,6 +9,41 @@
   --amber: #ffb000;
   --danger: #ad334b;
   --success: #087c67;
+  --surface: #fff;
+  --topbar: rgba(245, 247, 249, 0.94);
+  --field-border: #bac6d1;
+  --switch-border: #aab7c4;
+  --switch-track: #d8e0e7;
+  --body-copy: #3d4d60;
+  --rail: #edf1f5;
+  --track: #cdd6df;
+  --rail-border: #d5dde5;
+  --code: #edf2f7;
+  --strengths: #eaf7f3;
+  --note: #fff8e5;
+}
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --ink: #e9eef5;
+  --navy: #263d59;
+  --blue: #86b3ff;
+  --paper: #111a26;
+  --mist: #344357;
+  --muted: #a8b7c9;
+  --danger: #ff8da4;
+  --success: #75d8bd;
+  --surface: #1b2838;
+  --topbar: rgba(17, 26, 38, 0.96);
+  --field-border: #52657a;
+  --switch-border: #697c91;
+  --switch-track: #46576c;
+  --body-copy: #c5d1df;
+  --rail: #172333;
+  --track: #46576c;
+  --rail-border: #344357;
+  --code: #23344a;
+  --strengths: #183c39;
+  --note: #40371f;
 }
 *,
 *::before,
