@@ -1386,6 +1386,22 @@ details summary,
   .question-card {
     min-height: 25rem;
   }
+  .recording-zone {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .recording-zone .record-button,
+  .recording-zone .button {
+    width: 100%;
+    min-height: 5rem;
+    justify-content: center;
+    padding: 1.25rem 1rem;
+    font-size: 1.1rem;
+  }
+  .record-disc {
+    width: 4rem;
+    height: 4rem;
+  }
   .coaching-grid,
   .rubric-grid,
   .self-review-grid,
