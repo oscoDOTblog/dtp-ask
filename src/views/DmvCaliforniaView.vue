@@ -3,9 +3,23 @@ import { computed, nextTick, ref } from 'vue'
 import questionBank from '@/data/californiaDmvQuestions.json'
 
 type AnswerKey = 'A' | 'B' | 'C' | 'D'
+type QuizQuestion = (typeof questionBank.questions)[number]
+
+function shuffleOptions(question: QuizQuestion) {
+  const options = Object.entries(question.options).map(([key, text]) => ({
+    key: key as AnswerKey,
+    text,
+  }))
+  for (let index = options.length - 1; index > 0; index -= 1) {
+    const target = Math.floor(Math.random() * (index + 1))
+    ;[options[index], options[target]] = [options[target]!, options[index]!]
+  }
+  return options
+}
 
 const questions = ref([...questionBank.questions])
 const currentIndex = ref(0)
+const displayedOptions = ref(shuffleOptions(questions.value[0]!))
 const selectedAnswer = ref<AnswerKey | null>(null)
 const submittedAnswer = ref<AnswerKey | null>(null)
 const correctCount = ref(0)
@@ -41,12 +55,14 @@ function nextQuestion() {
   currentIndex.value += 1
   selectedAnswer.value = null
   submittedAnswer.value = null
+  displayedOptions.value = shuffleOptions(currentQuestion.value)
   nextTick(() => document.querySelector<HTMLElement>('.dmv-question h1')?.focus())
 }
 
 function restart() {
   currentIndex.value = 0
   questions.value = [...questionBank.questions]
+  displayedOptions.value = shuffleOptions(questions.value[0]!)
   selectedAnswer.value = null
   submittedAnswer.value = null
   correctCount.value = 0
@@ -110,19 +126,21 @@ function optionClass(key: string) {
             <fieldset :disabled="Boolean(submittedAnswer)">
               <legend class="sr-only">Choose one answer</legend>
               <label
-                v-for="(option, key) in currentQuestion.options"
-                :key="key"
-                :class="optionClass(key)"
+                v-for="option in displayedOptions"
+                :key="option.key"
+                :class="optionClass(option.key)"
               >
-                <input v-model="selectedAnswer" type="radio" :value="key" />
-                <span class="option-key">{{ key }}</span>
-                <span>{{ option }}</span>
+                <input v-model="selectedAnswer" type="radio" :value="option.key" />
+                <span class="option-key">{{ option.key }}</span>
+                <span>{{ option.text }}</span>
                 <span
-                  v-if="submittedAnswer && key === currentQuestion.correct_answer"
+                  v-if="submittedAnswer && option.key === currentQuestion.correct_answer"
                   class="option-mark"
                   >✓</span
                 >
-                <span v-else-if="submittedAnswer && key === submittedAnswer" class="option-mark"
+                <span
+                  v-else-if="submittedAnswer && option.key === submittedAnswer"
+                  class="option-mark"
                   >×</span
                 >
               </label>

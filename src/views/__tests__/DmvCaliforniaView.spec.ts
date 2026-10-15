@@ -46,4 +46,20 @@ describe('California DMV practice', () => {
     expect(wrapper.get('.dmv-question h1').text()).not.toBe(questionBank.questions[1]?.question)
     vi.restoreAllMocks()
   })
+
+  it('randomizes answer display order while preserving the correct answer key', async () => {
+    vi.spyOn(Math, 'random').mockReturnValue(0)
+    const wrapper = mount(DmvCaliforniaView, {
+      global: { stubs: { RouterLink: true } },
+    })
+
+    const displayedKeys = wrapper.findAll('.option-key').map((option) => option.text())
+    expect(displayedKeys).not.toEqual(['A', 'B', 'C', 'D'])
+
+    await wrapper.get('input[value="B"]').setValue(true)
+    await wrapper.get('form').trigger('submit')
+    expect(wrapper.get('.answer-result').text()).toContain('Correct')
+    expect(wrapper.findAll('.dmv-options label.correct')).toHaveLength(1)
+    vi.restoreAllMocks()
+  })
 })
