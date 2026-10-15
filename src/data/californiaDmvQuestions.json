@@ -1,0 +1,1407 @@
+{
+  "title": "California DMV Practice Questions",
+  "source": "California Driver’s Handbook (2025)",
+  "question_count": 100,
+  "questions": [
+    {
+      "id": 1,
+      "category": "Licensing",
+      "question": "What license do most drivers of ordinary passenger cars need?",
+      "options": {
+        "A": "Commercial Class A",
+        "B": "Noncommercial Class C",
+        "C": "Motorcycle Class M",
+        "D": "Commercial Class B"
+      },
+      "correct_answer": "B",
+      "explanation": "Noncommercial Class C. Refer to Section 1 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 1"
+    },
+    {
+      "id": 2,
+      "category": "Licensing",
+      "question": "Which activity generally requires a REAL ID-compliant license or another acceptable ID?",
+      "options": {
+        "A": "Buying groceries",
+        "B": "Boarding a domestic flight",
+        "C": "Registering a bicycle",
+        "D": "Paying a parking meter"
+      },
+      "correct_answer": "B",
+      "explanation": "Boarding a domestic flight. Refer to Section 1 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 1"
+    },
+    {
+      "id": 3,
+      "category": "Signals",
+      "question": "What does a solid red traffic light mean?",
+      "options": {
+        "A": "Stop",
+        "B": "Slow down only",
+        "C": "Proceed if no cars are visible",
+        "D": "Yield without stopping"
+      },
+      "correct_answer": "A",
+      "explanation": "Stop. Refer to Section 7 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 7"
+    },
+    {
+      "id": 4,
+      "category": "Signals",
+      "question": "When may you turn right at a red light?",
+      "options": {
+        "A": "Without stopping if clear",
+        "B": "After stopping and yielding, unless prohibited by a sign",
+        "C": "Only when a police officer is present",
+        "D": "Never"
+      },
+      "correct_answer": "B",
+      "explanation": "After stopping and yielding, unless prohibited by a sign. Refer to Section 7 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 7"
+    },
+    {
+      "id": 5,
+      "category": "Signals",
+      "question": "What must you do at a red arrow?",
+      "options": {
+        "A": "Turn after stopping",
+        "B": "Yield and turn",
+        "C": "Remain stopped until a green signal or arrow permits movement",
+        "D": "Proceed slowly"
+      },
+      "correct_answer": "C",
+      "explanation": "Remain stopped until a green signal or arrow permits movement. Refer to Section 7 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 7"
+    },
+    {
+      "id": 6,
+      "category": "Signals",
+      "question": "What does a flashing red light mean?",
+      "options": {
+        "A": "Stop, then go when safe",
+        "B": "Keep moving slowly",
+        "C": "The road is closed",
+        "D": "Speed up"
+      },
+      "correct_answer": "A",
+      "explanation": "Stop, then go when safe. Refer to Section 7 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 7"
+    },
+    {
+      "id": 7,
+      "category": "Signals",
+      "question": "What should you do at a solid yellow traffic light?",
+      "options": {
+        "A": "Accelerate to beat the red",
+        "B": "Stop if you can safely; otherwise proceed cautiously",
+        "C": "Always stop immediately regardless of safety",
+        "D": "Ignore it"
+      },
+      "correct_answer": "B",
+      "explanation": "Stop if you can safely; otherwise proceed cautiously. Refer to Section 7 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 7"
+    },
+    {
+      "id": 8,
+      "category": "Signals",
+      "question": "What does a flashing yellow traffic light require?",
+      "options": {
+        "A": "Complete stop",
+        "B": "Proceed with caution",
+        "C": "U-turn",
+        "D": "Wait for green"
+      },
+      "correct_answer": "B",
+      "explanation": "Proceed with caution. Refer to Section 7 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 7"
+    },
+    {
+      "id": 9,
+      "category": "Signals",
+      "question": "What does a flashing yellow arrow mean?",
+      "options": {
+        "A": "Protected turn",
+        "B": "Turn is prohibited",
+        "C": "Turn after yielding to oncoming traffic and proceeding cautiously",
+        "D": "Stop until green"
+      },
+      "correct_answer": "C",
+      "explanation": "Turn after yielding to oncoming traffic and proceeding cautiously. Refer to Section 7 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 7"
+    },
+    {
+      "id": 10,
+      "category": "Signals",
+      "question": "How should you treat an intersection when its traffic signals are not working?",
+      "options": {
+        "A": "As an all-way stop",
+        "B": "As a green light",
+        "C": "As a yield sign for your direction only",
+        "D": "As a closed road"
+      },
+      "correct_answer": "A",
+      "explanation": "As an all-way stop. Refer to Section 7 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 7"
+    },
+    {
+      "id": 11,
+      "category": "Right of Way",
+      "question": "At an intersection without STOP or YIELD signs, two vehicles arrive simultaneously. Who generally goes first?",
+      "options": {
+        "A": "The vehicle on the left",
+        "B": "The faster vehicle",
+        "C": "The vehicle on the right",
+        "D": "The larger vehicle"
+      },
+      "correct_answer": "C",
+      "explanation": "The vehicle on the right. Refer to Section 7 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 7"
+    },
+    {
+      "id": 12,
+      "category": "Right of Way",
+      "question": "At an uncontrolled T intersection, who has the right-of-way?",
+      "options": {
+        "A": "Traffic on the through road",
+        "B": "Traffic on the road that ends",
+        "C": "The vehicle turning left",
+        "D": "Whoever honks first"
+      },
+      "correct_answer": "A",
+      "explanation": "Traffic on the through road. Refer to Section 7 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 7"
+    },
+    {
+      "id": 13,
+      "category": "Right of Way",
+      "question": "When turning left, who must you yield to?",
+      "options": {
+        "A": "Only vehicles behind you",
+        "B": "Pedestrians and approaching vehicles close enough to be dangerous",
+        "C": "Only trucks",
+        "D": "No one if your signal is on"
+      },
+      "correct_answer": "B",
+      "explanation": "Pedestrians and approaching vehicles close enough to be dangerous. Refer to Section 7 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 7"
+    },
+    {
+      "id": 14,
+      "category": "Merging",
+      "question": "When entering a highway, which traffic has the right-of-way?",
+      "options": {
+        "A": "Merging traffic",
+        "B": "Highway traffic already in the lanes",
+        "C": "Vehicles with turn signals on",
+        "D": "Vehicles in the slowest lane only"
+      },
+      "correct_answer": "B",
+      "explanation": "Highway traffic already in the lanes. Refer to Section 6 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 6"
+    },
+    {
+      "id": 15,
+      "category": "Following Distance",
+      "question": "What following interval does the handbook recommend in ordinary conditions?",
+      "options": {
+        "A": "One second",
+        "B": "Two seconds",
+        "C": "Three seconds",
+        "D": "Ten seconds"
+      },
+      "correct_answer": "C",
+      "explanation": "Three seconds. Refer to Section 6 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 6"
+    },
+    {
+      "id": 16,
+      "category": "Signaling",
+      "question": "How far before a turn should you normally signal?",
+      "options": {
+        "A": "At least 25 feet",
+        "B": "At least 50 feet",
+        "C": "At least 100 feet",
+        "D": "At least 500 feet"
+      },
+      "correct_answer": "C",
+      "explanation": "At least 100 feet. Refer to Section 5 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 5"
+    },
+    {
+      "id": 17,
+      "category": "Signaling",
+      "question": "How early should you signal before changing lanes on a freeway?",
+      "options": {
+        "A": "At least one second",
+        "B": "At least three seconds",
+        "C": "At least five seconds",
+        "D": "At least ten seconds"
+      },
+      "correct_answer": "C",
+      "explanation": "At least five seconds. Refer to Section 5 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 5"
+    },
+    {
+      "id": 18,
+      "category": "Bicycles",
+      "question": "When passing a bicyclist without changing lanes, how much clearance should you allow at minimum?",
+      "options": {
+        "A": "One foot",
+        "B": "Two feet",
+        "C": "Three feet",
+        "D": "Six inches"
+      },
+      "correct_answer": "C",
+      "explanation": "Three feet. Refer to Section 8 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 8"
+    },
+    {
+      "id": 19,
+      "category": "Bicycles",
+      "question": "How far before a turn may you enter a bicycle lane?",
+      "options": {
+        "A": "No more than 50 feet",
+        "B": "No more than 100 feet",
+        "C": "No more than 200 feet",
+        "D": "Any distance"
+      },
+      "correct_answer": "C",
+      "explanation": "No more than 200 feet. Refer to Section 8 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 8"
+    },
+    {
+      "id": 20,
+      "category": "Parking",
+      "question": "When parallel parking, how close must your wheels be to the curb?",
+      "options": {
+        "A": "Within 6 inches",
+        "B": "Within 18 inches",
+        "C": "Within 36 inches",
+        "D": "Within 48 inches"
+      },
+      "correct_answer": "B",
+      "explanation": "Within 18 inches. Refer to Section 6 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 6"
+    },
+    {
+      "id": 21,
+      "category": "Parking",
+      "question": "How close may you normally park to a fire hydrant?",
+      "options": {
+        "A": "At least 5 feet away",
+        "B": "At least 10 feet away",
+        "C": "At least 15 feet away",
+        "D": "Directly next to it"
+      },
+      "correct_answer": "C",
+      "explanation": "At least 15 feet away. Refer to Section 6 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 6"
+    },
+    {
+      "id": 22,
+      "category": "Speed Limits",
+      "question": "Unless otherwise posted, what is the speed limit in a business or residential district?",
+      "options": {
+        "A": "15 mph",
+        "B": "20 mph",
+        "C": "25 mph",
+        "D": "35 mph"
+      },
+      "correct_answer": "C",
+      "explanation": "25 mph. Refer to Section 8 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 8"
+    },
+    {
+      "id": 23,
+      "category": "Speed Limits",
+      "question": "What is the usual speed limit within 500 feet of a school when children are outside or crossing?",
+      "options": {
+        "A": "15 mph",
+        "B": "25 mph",
+        "C": "35 mph",
+        "D": "45 mph"
+      },
+      "correct_answer": "B",
+      "explanation": "25 mph. Refer to Section 8 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 8"
+    },
+    {
+      "id": 24,
+      "category": "School Buses",
+      "question": "What must you do when a school bus ahead flashes red lights on a typical undivided road?",
+      "options": {
+        "A": "Pass carefully",
+        "B": "Stop until the red lights stop flashing and it is safe",
+        "C": "Slow to 15 mph",
+        "D": "Stop only if children are visible"
+      },
+      "correct_answer": "B",
+      "explanation": "Stop until the red lights stop flashing and it is safe. Refer to Section 8 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 8"
+    },
+    {
+      "id": 25,
+      "category": "School Buses",
+      "question": "When is stopping for a school bus with flashing red lights generally not required?",
+      "options": {
+        "A": "When you are late",
+        "B": "When it is on the opposite side of a divided or multilane highway with two or more lanes each direction",
+        "C": "When no children are visible",
+        "D": "When traveling below 25 mph"
+      },
+      "correct_answer": "B",
+      "explanation": "When it is on the opposite side of a divided or multilane highway with two or more lanes each direction. Refer to Section 8 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 8"
+    },
+    {
+      "id": 26,
+      "category": "Alcohol and Drugs",
+      "question": "What BAC is illegal for drivers over age 21 under the handbook rule?",
+      "options": {
+        "A": "0.01% or higher",
+        "B": "0.04% or higher",
+        "C": "0.08% or higher",
+        "D": "0.12% or higher"
+      },
+      "correct_answer": "C",
+      "explanation": "0.08% or higher. Refer to Section 9 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 9"
+    },
+    {
+      "id": 27,
+      "category": "Alcohol and Drugs",
+      "question": "What BAC is illegal for drivers under age 21?",
+      "options": {
+        "A": "0.01% or higher",
+        "B": "0.04% or higher",
+        "C": "0.08% or higher",
+        "D": "0.10% or higher"
+      },
+      "correct_answer": "A",
+      "explanation": "0.01% or higher. Refer to Section 9 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 9"
+    },
+    {
+      "id": 28,
+      "category": "Alcohol and Drugs",
+      "question": "What BAC threshold applies to drivers operating a vehicle requiring a commercial driver license?",
+      "options": {
+        "A": "0.01%",
+        "B": "0.04%",
+        "C": "0.08%",
+        "D": "0.10%"
+      },
+      "correct_answer": "B",
+      "explanation": "0.04%. Refer to Section 9 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 9"
+    },
+    {
+      "id": 29,
+      "category": "Alcohol and Drugs",
+      "question": "Can driving be unsafe even if BAC is below the legal limit?",
+      "options": {
+        "A": "No, legal means safe",
+        "B": "Yes, alcohol can impair driving below the limit",
+        "C": "Only for commercial drivers",
+        "D": "Only at night"
+      },
+      "correct_answer": "B",
+      "explanation": "Yes, alcohol can impair driving below the limit. Refer to Section 9 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 9"
+    },
+    {
+      "id": 30,
+      "category": "Pedestrians",
+      "question": "What should you do when a pedestrian is crossing a roadway?",
+      "options": {
+        "A": "Honk to make them hurry",
+        "B": "Allow them to safely finish crossing",
+        "C": "Drive around them at speed",
+        "D": "Stop only at painted crosswalks"
+      },
+      "correct_answer": "B",
+      "explanation": "Allow them to safely finish crossing. Refer to Section 7 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 7"
+    },
+    {
+      "id": 31,
+      "category": "Testing",
+      "question": "How many attempts are allowed to pass the knowledge test before reapplying?",
+      "options": {
+        "A": "One",
+        "B": "Two",
+        "C": "Five",
+        "D": "Three"
+      },
+      "correct_answer": "D",
+      "explanation": "Three. Refer to Section 3 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 3"
+    },
+    {
+      "id": 32,
+      "category": "Testing",
+      "question": "How long must a minor wait before retaking a failed knowledge test?",
+      "options": {
+        "A": "One day",
+        "B": "Seven days, excluding the failure day",
+        "C": "Fourteen days",
+        "D": "Thirty days"
+      },
+      "correct_answer": "B",
+      "explanation": "Seven days, excluding the failure day. Refer to Section 3 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 3"
+    },
+    {
+      "id": 33,
+      "category": "Testing",
+      "question": "How long must a minor wait to retake a failed behind-the-wheel test?",
+      "options": {
+        "A": "One day",
+        "B": "Seven days",
+        "C": "Fourteen days, excluding the failure day",
+        "D": "Thirty days"
+      },
+      "correct_answer": "C",
+      "explanation": "Fourteen days, excluding the failure day. Refer to Section 3 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 3"
+    },
+    {
+      "id": 34,
+      "category": "Testing",
+      "question": "What must you bring to a behind-the-wheel test?",
+      "options": {
+        "A": "Valid proof of insurance and vehicle registration",
+        "B": "A mechanic’s certificate",
+        "C": "A vehicle purchase receipt",
+        "D": "A road map"
+      },
+      "correct_answer": "A",
+      "explanation": "Valid proof of insurance and vehicle registration. Refer to Section 3 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 3"
+    },
+    {
+      "id": 35,
+      "category": "Testing",
+      "question": "How old must the accompanying California-licensed driver be for an adult applicant who is not already licensed?",
+      "options": {
+        "A": "At least 16",
+        "B": "At least 21",
+        "C": "At least 30",
+        "D": "At least 18"
+      },
+      "correct_answer": "D",
+      "explanation": "At least 18. Refer to Section 3 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 3"
+    },
+    {
+      "id": 36,
+      "category": "Testing",
+      "question": "How old must the accompanying California-licensed driver be for a minor taking a drive test?",
+      "options": {
+        "A": "At least 18",
+        "B": "At least 25",
+        "C": "At least 20",
+        "D": "At least 30"
+      },
+      "correct_answer": "B",
+      "explanation": "At least 25. Refer to Section 3 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 3"
+    },
+    {
+      "id": 37,
+      "category": "Testing",
+      "question": "How many rearview mirrors must a drive-test vehicle have at minimum?",
+      "options": {
+        "A": "One interior mirror",
+        "B": "Three interior mirrors",
+        "C": "Two, including one on the left side",
+        "D": "Four mirrors"
+      },
+      "correct_answer": "C",
+      "explanation": "Two, including one on the left side. Refer to Section 3 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 3"
+    },
+    {
+      "id": 38,
+      "category": "Testing",
+      "question": "What is the minimum tire tread depth required for a drive-test vehicle?",
+      "options": {
+        "A": "1/32 inch",
+        "B": "1/8 inch",
+        "C": "1/4 inch",
+        "D": "1 inch"
+      },
+      "correct_answer": "A",
+      "explanation": "1/32 inch. Refer to Section 3 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 3"
+    },
+    {
+      "id": 39,
+      "category": "Testing",
+      "question": "From what minimum distance must a properly working horn be audible for the drive test?",
+      "options": {
+        "A": "50 feet",
+        "B": "100 feet",
+        "C": "500 feet",
+        "D": "200 feet"
+      },
+      "correct_answer": "D",
+      "explanation": "200 feet. Refer to Section 3 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 3"
+    },
+    {
+      "id": 40,
+      "category": "Testing",
+      "question": "May you use automated parallel parking during the behind-the-wheel test?",
+      "options": {
+        "A": "Yes, whenever available",
+        "B": "No",
+        "C": "Only during rain",
+        "D": "Only in a rental car"
+      },
+      "correct_answer": "B",
+      "explanation": "No. Refer to Section 3 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 3"
+    },
+    {
+      "id": 41,
+      "category": "Testing",
+      "question": "Can a backup camera replace looking in mirrors and checking blind spots during the drive test?",
+      "options": {
+        "A": "Yes",
+        "B": "Only at low speed",
+        "C": "No",
+        "D": "Only when parking uphill"
+      },
+      "correct_answer": "C",
+      "explanation": "No. Refer to Section 3 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 3"
+    },
+    {
+      "id": 42,
+      "category": "Testing",
+      "question": "What happens if your drive-test vehicle fails the safety requirements?",
+      "options": {
+        "A": "Your drive test will be rescheduled",
+        "B": "You automatically fail the knowledge test",
+        "C": "You receive a temporary license",
+        "D": "The examiner must repair the vehicle"
+      },
+      "correct_answer": "A",
+      "explanation": "Your drive test will be rescheduled. Refer to Section 3 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 3"
+    },
+    {
+      "id": 43,
+      "category": "Health",
+      "question": "Is wearing a headset or earplugs in both ears legal while driving?",
+      "options": {
+        "A": "Yes, always",
+        "B": "Only on freeways",
+        "C": "Only during daylight",
+        "D": "No"
+      },
+      "correct_answer": "D",
+      "explanation": "No. Refer to Section 5 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 5"
+    },
+    {
+      "id": 44,
+      "category": "Health",
+      "question": "Can over-the-counter medicine affect safe driving?",
+      "options": {
+        "A": "No",
+        "B": "Yes",
+        "C": "Only if taken with food",
+        "D": "Only for drivers under 21"
+      },
+      "correct_answer": "B",
+      "explanation": "Yes. Refer to Section 5 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 5"
+    },
+    {
+      "id": 45,
+      "category": "Steering",
+      "question": "Which hand positions are recommended for hand-to-hand steering?",
+      "options": {
+        "A": "12 and 6 only",
+        "B": "10 and 2 only",
+        "C": "9 and 3 or 8 and 4 o’clock",
+        "D": "Both hands at 12"
+      },
+      "correct_answer": "C",
+      "explanation": "9 and 3 or 8 and 4 o’clock. Refer to Section 5 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 5"
+    },
+    {
+      "id": 46,
+      "category": "Steering",
+      "question": "When is hand-over-hand steering especially useful?",
+      "options": {
+        "A": "Low-speed turns and parking",
+        "B": "Cruising straight on a freeway",
+        "C": "Using cruise control",
+        "D": "Reading road signs"
+      },
+      "correct_answer": "A",
+      "explanation": "Low-speed turns and parking. Refer to Section 5 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 5"
+    },
+    {
+      "id": 47,
+      "category": "Signaling",
+      "question": "Should you signal a turn even when you do not see other vehicles?",
+      "options": {
+        "A": "No",
+        "B": "Only at night",
+        "C": "Only near schools",
+        "D": "Yes"
+      },
+      "correct_answer": "D",
+      "explanation": "Yes. Refer to Section 5 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 5"
+    },
+    {
+      "id": 48,
+      "category": "Signaling",
+      "question": "When should you cancel your turn signal?",
+      "options": {
+        "A": "Only after driving one mile",
+        "B": "When it is no longer needed",
+        "C": "Before beginning the turn",
+        "D": "Only when another driver honks"
+      },
+      "correct_answer": "B",
+      "explanation": "When it is no longer needed. Refer to Section 5 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 5"
+    },
+    {
+      "id": 49,
+      "category": "Horn",
+      "question": "When is using your horn appropriate?",
+      "options": {
+        "A": "To show frustration",
+        "B": "To tell a friend hello",
+        "C": "To warn others of a hazard",
+        "D": "To demand right-of-way"
+      },
+      "correct_answer": "C",
+      "explanation": "To warn others of a hazard. Refer to Section 5 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 5"
+    },
+    {
+      "id": 50,
+      "category": "Headlights",
+      "question": "Within what distance of an oncoming vehicle should you dim high beams?",
+      "options": {
+        "A": "500 feet",
+        "B": "100 feet",
+        "C": "200 feet",
+        "D": "1,000 feet"
+      },
+      "correct_answer": "A",
+      "explanation": "500 feet. Refer to Section 5 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 5"
+    },
+    {
+      "id": 51,
+      "category": "Headlights",
+      "question": "Within what distance of a vehicle you are following should you dim high beams?",
+      "options": {
+        "A": "50 feet",
+        "B": "100 feet",
+        "C": "800 feet",
+        "D": "300 feet"
+      },
+      "correct_answer": "D",
+      "explanation": "300 feet. Refer to Section 5 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 5"
+    },
+    {
+      "id": 52,
+      "category": "Headlights",
+      "question": "When should headlights be on after sunset?",
+      "options": {
+        "A": "Only after midnight",
+        "B": "Beginning 30 minutes after sunset",
+        "C": "Beginning two hours after sunset",
+        "D": "Only when streetlights are off"
+      },
+      "correct_answer": "B",
+      "explanation": "Beginning 30 minutes after sunset. Refer to Section 5 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 5"
+    },
+    {
+      "id": 53,
+      "category": "Headlights",
+      "question": "When should headlights remain on before sunrise?",
+      "options": {
+        "A": "Until two hours before sunrise",
+        "B": "Only until midnight",
+        "C": "Until 30 minutes before sunrise",
+        "D": "Until the sun is fully above the horizon"
+      },
+      "correct_answer": "C",
+      "explanation": "Until 30 minutes before sunrise. Refer to Section 5 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 5"
+    },
+    {
+      "id": 54,
+      "category": "Headlights",
+      "question": "Which headlights must you use when windshield wipers are needed because of fog, rain, or snow?",
+      "options": {
+        "A": "Low beams",
+        "B": "Parking lights only",
+        "C": "High beams only",
+        "D": "No lights in daylight"
+      },
+      "correct_answer": "A",
+      "explanation": "Low beams. Refer to Section 5 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 5"
+    },
+    {
+      "id": 55,
+      "category": "Headlights",
+      "question": "Is driving with only parking lights permitted?",
+      "options": {
+        "A": "Yes, on city streets",
+        "B": "Yes, before midnight",
+        "C": "Yes, under 25 mph",
+        "D": "No"
+      },
+      "correct_answer": "D",
+      "explanation": "No. Refer to Section 5 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 5"
+    },
+    {
+      "id": 56,
+      "category": "Emergency",
+      "question": "If you must stop for vehicle trouble, where should you stop if possible?",
+      "options": {
+        "A": "Just beyond a hill crest",
+        "B": "Off the road, away from traffic",
+        "C": "In the left travel lane",
+        "D": "Immediately after a blind curve"
+      },
+      "correct_answer": "B",
+      "explanation": "Off the road, away from traffic. Refer to Section 5 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 5"
+    },
+    {
+      "id": 57,
+      "category": "Lane Changes",
+      "question": "What should you check in addition to mirrors before changing lanes?",
+      "options": {
+        "A": "Only the speedometer",
+        "B": "Only the navigation screen",
+        "C": "Blind spots by looking over your shoulder",
+        "D": "Only the rearview camera"
+      },
+      "correct_answer": "C",
+      "explanation": "Blind spots by looking over your shoulder. Refer to Section 6 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 6"
+    },
+    {
+      "id": 58,
+      "category": "Lane Changes",
+      "question": "What should you do if you miss a turn?",
+      "options": {
+        "A": "Continue until you can turn around safely and legally",
+        "B": "Reverse in the travel lane",
+        "C": "Cut across several lanes immediately",
+        "D": "Stop in the intersection"
+      },
+      "correct_answer": "A",
+      "explanation": "Continue until you can turn around safely and legally. Refer to Section 6 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 6"
+    },
+    {
+      "id": 59,
+      "category": "Lanes",
+      "question": "What is the far-left lane on a multilane road generally used for?",
+      "options": {
+        "A": "Parking",
+        "B": "Entering from a shoulder",
+        "C": "Loading passengers",
+        "D": "Passing or turning left"
+      },
+      "correct_answer": "D",
+      "explanation": "Passing or turning left. Refer to Section 6 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 6"
+    },
+    {
+      "id": 60,
+      "category": "Lanes",
+      "question": "What does the diamond symbol in a lane typically identify?",
+      "options": {
+        "A": "A bicycle-only lane",
+        "B": "A carpool or HOV lane",
+        "C": "A breakdown lane",
+        "D": "A no-stopping zone"
+      },
+      "correct_answer": "B",
+      "explanation": "A carpool or HOV lane. Refer to Section 6 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 6"
+    },
+    {
+      "id": 61,
+      "category": "Lanes",
+      "question": "Can you cross double solid lines to enter or exit an HOV lane?",
+      "options": {
+        "A": "Yes, at any time",
+        "B": "Yes, if you signal",
+        "C": "No; use designated entrances and exits",
+        "D": "Only when traffic is slow"
+      },
+      "correct_answer": "C",
+      "explanation": "No; use designated entrances and exits. Refer to Section 6 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 6"
+    },
+    {
+      "id": 62,
+      "category": "Lanes",
+      "question": "How far may you drive in a center left-turn lane?",
+      "options": {
+        "A": "No more than 200 feet",
+        "B": "No more than 50 feet",
+        "C": "No more than 500 feet",
+        "D": "Any distance if traffic is light"
+      },
+      "correct_answer": "A",
+      "explanation": "No more than 200 feet. Refer to Section 6 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 6"
+    },
+    {
+      "id": 63,
+      "category": "Lanes",
+      "question": "What is a center left-turn lane intended for?",
+      "options": {
+        "A": "Passing slower traffic",
+        "B": "Regular through travel",
+        "C": "Emergency parking",
+        "D": "Preparing for and making left turns or U-turns"
+      },
+      "correct_answer": "D",
+      "explanation": "Preparing for and making left turns or U-turns. Refer to Section 6 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 6"
+    },
+    {
+      "id": 64,
+      "category": "Lanes",
+      "question": "When must a slow driver use a turnout on a two-lane road where passing is unsafe?",
+      "options": {
+        "A": "Whenever one vehicle is following",
+        "B": "When five or more vehicles are following",
+        "C": "Only when ten trucks follow",
+        "D": "Only at night"
+      },
+      "correct_answer": "B",
+      "explanation": "When five or more vehicles are following. Refer to Section 6 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 6"
+    },
+    {
+      "id": 65,
+      "category": "Road Markings",
+      "question": "What do large broken lines often indicate on a freeway?",
+      "options": {
+        "A": "A school crossing",
+        "B": "A mandatory full stop",
+        "C": "A lane is ending or an exit is approaching",
+        "D": "A railroad crossing"
+      },
+      "correct_answer": "C",
+      "explanation": "A lane is ending or an exit is approaching. Refer to Section 6 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 6"
+    },
+    {
+      "id": 66,
+      "category": "Road Markings",
+      "question": "What does a row of solid white triangles painted across a lane indicate?",
+      "options": {
+        "A": "A yield line",
+        "B": "A pedestrian countdown",
+        "C": "A no-parking area",
+        "D": "A speed bump"
+      },
+      "correct_answer": "A",
+      "explanation": "A yield line. Refer to Section 6 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 6"
+    },
+    {
+      "id": 67,
+      "category": "Signals",
+      "question": "What does a solid green traffic light mean?",
+      "options": {
+        "A": "Accelerate without looking",
+        "B": "You may never turn",
+        "C": "All crosswalks are closed",
+        "D": "Proceed when safe and yield to people or vehicles still in the intersection"
+      },
+      "correct_answer": "D",
+      "explanation": "Proceed when safe and yield to people or vehicles still in the intersection. Refer to Section 7 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 7"
+    },
+    {
+      "id": 68,
+      "category": "Signals",
+      "question": "What does a green arrow indicate?",
+      "options": {
+        "A": "An unprotected turn",
+        "B": "A protected movement in the arrow’s direction",
+        "C": "A mandatory U-turn",
+        "D": "Stop and yield"
+      },
+      "correct_answer": "B",
+      "explanation": "A protected movement in the arrow’s direction. Refer to Section 7 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 7"
+    },
+    {
+      "id": 69,
+      "category": "Signals",
+      "question": "What does a yellow arrow indicate?",
+      "options": {
+        "A": "The turn is fully protected",
+        "B": "All traffic must reverse",
+        "C": "The protected turning phase is ending",
+        "D": "Pedestrians must stop immediately"
+      },
+      "correct_answer": "C",
+      "explanation": "The protected turning phase is ending. Refer to Section 7 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 7"
+    },
+    {
+      "id": 70,
+      "category": "Signs",
+      "question": "At a STOP sign, where should you stop if a limit line is marked?",
+      "options": {
+        "A": "Before the limit line",
+        "B": "After the crosswalk",
+        "C": "In the middle of the intersection",
+        "D": "Only when cross traffic is visible"
+      },
+      "correct_answer": "A",
+      "explanation": "Before the limit line. Refer to Section 7 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 7"
+    },
+    {
+      "id": 71,
+      "category": "Signs",
+      "question": "What should you do at a YIELD sign?",
+      "options": {
+        "A": "Always speed up",
+        "B": "Always reverse",
+        "C": "Stop for exactly ten seconds",
+        "D": "Slow down and be prepared to stop for others"
+      },
+      "correct_answer": "D",
+      "explanation": "Slow down and be prepared to stop for others. Refer to Section 7 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 7"
+    },
+    {
+      "id": 72,
+      "category": "Signs",
+      "question": "What does a five-sided road sign generally warn of?",
+      "options": {
+        "A": "A freeway entrance",
+        "B": "A school area",
+        "C": "A hospital",
+        "D": "A railroad crossing"
+      },
+      "correct_answer": "B",
+      "explanation": "A school area. Refer to Section 7 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 7"
+    },
+    {
+      "id": 73,
+      "category": "Signs",
+      "question": "What does a diamond-shaped road sign generally indicate?",
+      "options": {
+        "A": "A mandatory parking space",
+        "B": "A highway route number only",
+        "C": "Warnings about conditions or dangers ahead",
+        "D": "A gas station"
+      },
+      "correct_answer": "C",
+      "explanation": "Warnings about conditions or dangers ahead. Refer to Section 7 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 7"
+    },
+    {
+      "id": 74,
+      "category": "Signs",
+      "question": "What does a circular yellow-and-black railroad warning sign mean?",
+      "options": {
+        "A": "A railroad crossing is ahead",
+        "B": "A pedestrian crossing is ahead",
+        "C": "A one-way road begins",
+        "D": "A hospital is nearby"
+      },
+      "correct_answer": "A",
+      "explanation": "A railroad crossing is ahead. Refer to Section 7 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 7"
+    },
+    {
+      "id": 75,
+      "category": "Signs",
+      "question": "What does a red circle with a red slash through a symbol mean?",
+      "options": {
+        "A": "The action is recommended",
+        "B": "The action is required",
+        "C": "The road is scenic",
+        "D": "The pictured action is prohibited"
+      },
+      "correct_answer": "D",
+      "explanation": "The pictured action is prohibited. Refer to Section 7 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 7"
+    },
+    {
+      "id": 76,
+      "category": "Signs",
+      "question": "What should you do if you encounter a WRONG WAY sign?",
+      "options": {
+        "A": "Continue until the next exit",
+        "B": "Safely turn around or back out",
+        "C": "Accelerate to clear the road",
+        "D": "Stop in the travel lane indefinitely"
+      },
+      "correct_answer": "B",
+      "explanation": "Safely turn around or back out. Refer to Section 7 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 7"
+    },
+    {
+      "id": 77,
+      "category": "Pedestrians",
+      "question": "What does a flashing DON’T WALK hand mean for someone who has not begun crossing?",
+      "options": {
+        "A": "Start crossing quickly",
+        "B": "Cars must stop for a full minute",
+        "C": "Do not start crossing",
+        "D": "The intersection is closed"
+      },
+      "correct_answer": "C",
+      "explanation": "Do not start crossing. Refer to Section 7 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 7"
+    },
+    {
+      "id": 78,
+      "category": "Pedestrians",
+      "question": "Must drivers yield to pedestrians already crossing when the DON’T WALK signal flashes?",
+      "options": {
+        "A": "Yes",
+        "B": "No",
+        "C": "Only if a crossing guard is present",
+        "D": "Only at night"
+      },
+      "correct_answer": "A",
+      "explanation": "Yes. Refer to Section 7 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 7"
+    },
+    {
+      "id": 79,
+      "category": "Right of Way",
+      "question": "Who generally has the right-of-way at an intersection if one vehicle arrives first?",
+      "options": {
+        "A": "The largest vehicle",
+        "B": "The vehicle going fastest",
+        "C": "The vehicle turning left",
+        "D": "The vehicle that arrives first"
+      },
+      "correct_answer": "D",
+      "explanation": "The vehicle that arrives first. Refer to Section 7 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 7"
+    },
+    {
+      "id": 80,
+      "category": "Right of Way",
+      "question": "When entering a lane of traffic, to whom must you yield?",
+      "options": {
+        "A": "Only vehicles behind you",
+        "B": "Traffic already occupying the lane",
+        "C": "Only motorcycles",
+        "D": "Nobody if you signal"
+      },
+      "correct_answer": "B",
+      "explanation": "Traffic already occupying the lane. Refer to Section 7 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 7"
+    },
+    {
+      "id": 81,
+      "category": "Safe Driving",
+      "question": "How far ahead should you scan the road according to the handbook?",
+      "options": {
+        "A": "One second ahead",
+        "B": "Two seconds ahead",
+        "C": "At least 10 seconds ahead",
+        "D": "Exactly 30 minutes ahead"
+      },
+      "correct_answer": "C",
+      "explanation": "At least 10 seconds ahead. Refer to Section 8 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 8"
+    },
+    {
+      "id": 82,
+      "category": "Safe Driving",
+      "question": "How should you respond if a driver merges too closely in front of you?",
+      "options": {
+        "A": "Ease off the accelerator to create space",
+        "B": "Accelerate toward them",
+        "C": "Brake hard without checking behind",
+        "D": "Immediately honk continuously"
+      },
+      "correct_answer": "A",
+      "explanation": "Ease off the accelerator to create space. Refer to Section 8 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 8"
+    },
+    {
+      "id": 83,
+      "category": "Safe Driving",
+      "question": "Where are blind spots usually located in passenger vehicles?",
+      "options": {
+        "A": "Only directly in front",
+        "B": "Only above the roof",
+        "C": "Only under the vehicle",
+        "D": "To the sides, slightly behind the driver"
+      },
+      "correct_answer": "D",
+      "explanation": "To the sides, slightly behind the driver. Refer to Section 8 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 8"
+    },
+    {
+      "id": 84,
+      "category": "Safe Driving",
+      "question": "Before opening a parked car door into traffic, what should you check?",
+      "options": {
+        "A": "Only the fuel gauge",
+        "B": "Blind spots and approaching traffic",
+        "C": "Only the clock",
+        "D": "Only the radio"
+      },
+      "correct_answer": "B",
+      "explanation": "Blind spots and approaching traffic. Refer to Section 8 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 8"
+    },
+    {
+      "id": 85,
+      "category": "Night Driving",
+      "question": "If oncoming headlights are too bright, where should you look?",
+      "options": {
+        "A": "Directly at the headlights",
+        "B": "At the center divider only",
+        "C": "Toward the right edge of your lane",
+        "D": "Down at your phone"
+      },
+      "correct_answer": "C",
+      "explanation": "Toward the right edge of your lane. Refer to Section 8 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 8"
+    },
+    {
+      "id": 86,
+      "category": "Night Driving",
+      "question": "What headlights should you use when it is raining?",
+      "options": {
+        "A": "Low beams",
+        "B": "High beams only",
+        "C": "Parking lights only",
+        "D": "No lights"
+      },
+      "correct_answer": "A",
+      "explanation": "Low beams. Refer to Section 8 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 8"
+    },
+    {
+      "id": 87,
+      "category": "Skids",
+      "question": "If your car begins to skid on a slippery surface, what should you do first?",
+      "options": {
+        "A": "Accelerate sharply",
+        "B": "Slam on the brakes",
+        "C": "Turn off the engine",
+        "D": "Slowly remove your foot from the accelerator"
+      },
+      "correct_answer": "D",
+      "explanation": "Slowly remove your foot from the accelerator. Refer to Section 8 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 8"
+    },
+    {
+      "id": 88,
+      "category": "Skids",
+      "question": "When recovering from a slippery-surface skid, which direction should you steer?",
+      "options": {
+        "A": "Always left",
+        "B": "In the direction of the skid",
+        "C": "Always right",
+        "D": "Away from the skid regardless of direction"
+      },
+      "correct_answer": "B",
+      "explanation": "In the direction of the skid. Refer to Section 8 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 8"
+    },
+    {
+      "id": 89,
+      "category": "Road Conditions",
+      "question": "How much does the handbook suggest reducing speed on a wet road?",
+      "options": {
+        "A": "Exactly 1 mph",
+        "B": "20 to 30 mph",
+        "C": "5 to 10 mph",
+        "D": "No reduction"
+      },
+      "correct_answer": "C",
+      "explanation": "5 to 10 mph. Refer to Section 8 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 8"
+    },
+    {
+      "id": 90,
+      "category": "Road Conditions",
+      "question": "How should you adjust speed on packed snow according to the handbook?",
+      "options": {
+        "A": "Reduce it by half",
+        "B": "Increase it by 10 mph",
+        "C": "Keep the posted limit regardless",
+        "D": "Reduce it by exactly 2 mph"
+      },
+      "correct_answer": "A",
+      "explanation": "Reduce it by half. Refer to Section 8 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 8"
+    },
+    {
+      "id": 91,
+      "category": "Road Conditions",
+      "question": "What maximum speed does the handbook recommend on ice?",
+      "options": {
+        "A": "15 mph",
+        "B": "25 mph",
+        "C": "45 mph",
+        "D": "5 mph"
+      },
+      "correct_answer": "D",
+      "explanation": "5 mph. Refer to Section 8 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 8"
+    },
+    {
+      "id": 92,
+      "category": "Road Conditions",
+      "question": "Which roadway features often freeze before other road surfaces?",
+      "options": {
+        "A": "Sunlit open pavement only",
+        "B": "Bridges and overpasses",
+        "C": "Heated tunnels",
+        "D": "Covered parking garages"
+      },
+      "correct_answer": "B",
+      "explanation": "Bridges and overpasses. Refer to Section 8 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 8"
+    },
+    {
+      "id": 93,
+      "category": "Road Conditions",
+      "question": "If visibility in heavy rain or snow is under 100 feet, what speed does the handbook say is unsafe to exceed?",
+      "options": {
+        "A": "15 mph",
+        "B": "55 mph",
+        "C": "30 mph",
+        "D": "65 mph"
+      },
+      "correct_answer": "C",
+      "explanation": "30 mph. Refer to Section 8 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 8"
+    },
+    {
+      "id": 94,
+      "category": "Hydroplaning",
+      "question": "What is hydroplaning?",
+      "options": {
+        "A": "Tires lose contact with the road and ride on water",
+        "B": "A vehicle drives on packed snow",
+        "C": "A tire puncture at low speed",
+        "D": "Engine overheating in rain"
+      },
+      "correct_answer": "A",
+      "explanation": "Tires lose contact with the road and ride on water. Refer to Section 8 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 8"
+    },
+    {
+      "id": 95,
+      "category": "Hydroplaning",
+      "question": "What should you do if your vehicle begins to hydroplane?",
+      "options": {
+        "A": "Slam on the brakes",
+        "B": "Accelerate sharply",
+        "C": "Make a sudden hard turn",
+        "D": "Slow down gradually without braking suddenly"
+      },
+      "correct_answer": "D",
+      "explanation": "Slow down gradually without braking suddenly. Refer to Section 8 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 8"
+    },
+    {
+      "id": 96,
+      "category": "Safe Driving",
+      "question": "Why should you avoid staying in another driver’s blind spot?",
+      "options": {
+        "A": "It reduces your fuel economy only",
+        "B": "They may not see your vehicle when changing lanes",
+        "C": "It automatically triggers a traffic citation",
+        "D": "It blocks your radio signal"
+      },
+      "correct_answer": "B",
+      "explanation": "They may not see your vehicle when changing lanes. Refer to Section 8 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 8"
+    },
+    {
+      "id": 97,
+      "category": "Safe Driving",
+      "question": "What should you do when a tailgater is behind you and a safe opportunity arises?",
+      "options": {
+        "A": "Brake-check them",
+        "B": "Speed up beyond the limit",
+        "C": "Move right to let them pass",
+        "D": "Block them from passing"
+      },
+      "correct_answer": "C",
+      "explanation": "Move right to let them pass. Refer to Section 8 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 8"
+    },
+    {
+      "id": 98,
+      "category": "Road Conditions",
+      "question": "What should you do at the first sign of rain after a long dry period?",
+      "options": {
+        "A": "Slow down because oil and dust can make pavement slippery",
+        "B": "Speed up before puddles form",
+        "C": "Turn off headlights",
+        "D": "Drive on the shoulder"
+      },
+      "correct_answer": "A",
+      "explanation": "Slow down because oil and dust can make pavement slippery. Refer to Section 8 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 8"
+    },
+    {
+      "id": 99,
+      "category": "Safe Driving",
+      "question": "When should you check blind spots before moving your vehicle?",
+      "options": {
+        "A": "Only after entering the next lane",
+        "B": "Only when a horn sounds",
+        "C": "Never if mirrors are adjusted",
+        "D": "Before pulling away from the curb"
+      },
+      "correct_answer": "D",
+      "explanation": "Before pulling away from the curb. Refer to Section 8 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 8"
+    },
+    {
+      "id": 100,
+      "category": "Testing",
+      "question": "Are cell phones allowed as aids during a DMV knowledge test?",
+      "options": {
+        "A": "Yes, for checking answers",
+        "B": "No",
+        "C": "Only if used silently",
+        "D": "Only by adults"
+      },
+      "correct_answer": "B",
+      "explanation": "No. Refer to Section 3 of the 2025 California Driver’s Handbook.",
+      "source_section": "Section 3"
+    }
+  ]
+}

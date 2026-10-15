@@ -743,6 +743,312 @@
   color: var(--muted);
   font-size: 0.82rem;
 }
+.dmv-feature {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  margin-top: clamp(4rem, 8vw, 7rem);
+  border-block: 1px solid var(--ink);
+  padding: 2rem 0;
+}
+.dmv-sign {
+  width: 7rem;
+  height: 5.5rem;
+  display: grid;
+  place-content: center;
+  border: 3px solid #fff;
+  outline: 3px solid #0b56a1;
+  color: #fff;
+  background: #0b56a1;
+  text-align: center;
+  transform: rotate(-1.5deg);
+}
+.dmv-sign span {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+}
+.dmv-sign strong {
+  font-size: 1.7rem;
+  letter-spacing: 0.04em;
+}
+.dmv-feature-copy h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-weight: 600;
+  letter-spacing: -0.045em;
+}
+.dmv-feature-copy > p:last-child {
+  max-width: 42rem;
+  margin: 0.65rem 0 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+.button--dmv,
+.button--dmv-submit,
+.button--dmv-next {
+  color: #fff;
+  background: #0b56a1;
+  text-decoration: none;
+}
+.dmv-page {
+  min-height: 100vh;
+  color: #142338;
+  background: #f4f7fa;
+}
+.dmv-topbar {
+  min-height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(1.25rem, 4vw, 4rem);
+  border-bottom: 1px solid #cbd5df;
+  background: #fff;
+}
+.dmv-wordmark {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+}
+.dmv-mini-sign {
+  padding: 0.45rem 0.55rem;
+  color: #fff;
+  background: #0b56a1;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+}
+.dmv-bank-count {
+  color: #607084;
+  font-size: 0.78rem;
+}
+.dmv-layout {
+  min-height: calc(100vh - 4.5rem);
+  display: grid;
+  grid-template-columns: minmax(15rem, 23vw) minmax(0, 1fr);
+}
+.dmv-progress {
+  display: grid;
+  grid-template-rows: auto auto minmax(10rem, 1fr) auto auto;
+  gap: 2rem;
+  padding: clamp(2rem, 4vw, 4rem);
+  color: #fff;
+  background: #0b56a1;
+}
+.dmv-progress .back-link {
+  color: #dbeaff;
+}
+.dmv-progress-number {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+.dmv-progress-number strong {
+  font-size: clamp(3rem, 5vw, 5.5rem);
+  font-weight: 500;
+  letter-spacing: -0.06em;
+}
+.dmv-progress-number span,
+.dmv-score span,
+.dmv-progress > p {
+  color: #c5daf2;
+}
+.dmv-progress-track {
+  position: relative;
+  width: 3px;
+  min-height: 10rem;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.25);
+}
+.dmv-progress-track i {
+  position: absolute;
+  inset: 0 0 auto;
+  background: #ffd43b;
+  transition: height 220ms ease;
+}
+.dmv-score {
+  display: flex;
+  flex-direction: column;
+}
+.dmv-score strong {
+  font-size: 1.8rem;
+}
+.dmv-shuffle {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  padding: 0.7rem 0.85rem;
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.78rem;
+}
+.dmv-shuffle:hover:not(:disabled) {
+  border-color: #ffd43b;
+  color: #ffd43b;
+}
+.dmv-shuffle span {
+  font-size: 1.1rem;
+}
+.dmv-progress > p {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.55;
+}
+.dmv-stage {
+  display: grid;
+  place-items: center;
+  padding: clamp(2rem, 6vw, 6rem);
+}
+.dmv-question {
+  width: min(100%, 790px);
+}
+.dmv-question-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  color: #607084;
+  font-size: 0.78rem;
+}
+.dmv-question h1 {
+  max-width: 18ch;
+  margin: 0 0 clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(2.2rem, 4.4vw, 4.4rem);
+  font-weight: 560;
+  letter-spacing: -0.055em;
+  line-height: 1.02;
+}
+.dmv-options fieldset {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0 0 1.5rem;
+  border: 0;
+  padding: 0;
+}
+.dmv-options label {
+  display: grid;
+  grid-template-columns: 2.2rem 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  min-height: 4.2rem;
+  border: 1px solid #cbd5df;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  background: #fff;
+  line-height: 1.4;
+}
+.dmv-options label:hover,
+.dmv-options label.selected {
+  border-color: #0b56a1;
+}
+.dmv-options label.selected {
+  box-shadow: inset 4px 0 #0b56a1;
+}
+.dmv-options label.correct {
+  border-color: #16734b;
+  background: #eaf7f0;
+  box-shadow: inset 4px 0 #16734b;
+}
+.dmv-options label.incorrect {
+  border-color: #b33a3a;
+  background: #fff0f0;
+  box-shadow: inset 4px 0 #b33a3a;
+}
+.dmv-options input {
+  position: absolute;
+  opacity: 0;
+}
+.option-key {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border: 1px solid #aebbc8;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.option-mark {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.answer-result {
+  margin-top: 2rem;
+  border-left: 5px solid #b33a3a;
+  padding: 1.3rem 1.5rem;
+  background: #fff;
+}
+.answer-result--correct {
+  border-left-color: #16734b;
+}
+.answer-result:focus {
+  outline: none;
+}
+.answer-verdict {
+  margin: 0 0 0.35rem;
+  color: #b33a3a;
+  font-size: 1.35rem;
+  font-weight: 750;
+}
+.answer-result--correct .answer-verdict {
+  color: #16734b;
+}
+.answer-result h2 {
+  margin: 0.2rem 0 0.7rem;
+  font-size: 1rem;
+}
+.answer-result > p:not(.answer-verdict) {
+  margin: 0 0 0.65rem;
+  line-height: 1.6;
+}
+.answer-result > span {
+  display: block;
+  color: #607084;
+  font-size: 0.75rem;
+}
+.button--dmv-next {
+  margin-top: 1.2rem;
+  background: #142338;
+}
+.dmv-results {
+  min-height: calc(100vh - 4.5rem);
+  display: grid;
+  place-content: center;
+  justify-items: start;
+  padding: 3rem;
+}
+.dmv-results-sign {
+  display: grid;
+  width: 5rem;
+  height: 5rem;
+  place-items: center;
+  margin-bottom: 2rem;
+  border-radius: 50%;
+  color: #fff;
+  background: #16734b;
+  font-size: 2.4rem;
+}
+.dmv-results h1 {
+  margin: 0;
+  font-size: clamp(4rem, 10vw, 8rem);
+  font-weight: 500;
+  letter-spacing: -0.07em;
+}
+.dmv-results > p:not(.context-line) {
+  max-width: 38rem;
+  color: #607084;
+  line-height: 1.65;
+}
+.dmv-results > div {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
 .practice-view {
   min-height: calc(100vh - 4.5rem);
   display: grid;
@@ -1284,6 +1590,43 @@ details summary,
   transform: translateY(1.25rem);
 }
 @media (max-width: 820px) {
+  .dmv-feature {
+    grid-template-columns: 6rem 1fr;
+  }
+  .dmv-feature .button {
+    grid-column: 2;
+    justify-self: start;
+  }
+  .dmv-sign {
+    width: 6rem;
+  }
+  .dmv-layout {
+    grid-template-columns: 1fr;
+  }
+  .dmv-progress {
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    gap: 1rem 2rem;
+    padding: 1.5rem;
+  }
+  .dmv-progress .back-link,
+  .dmv-progress > p {
+    grid-column: 1 / -1;
+  }
+  .dmv-progress-number strong {
+    font-size: 3rem;
+  }
+  .dmv-progress-track {
+    width: auto;
+    min-height: 3px;
+    height: 3px;
+  }
+  .dmv-progress-track i {
+    inset: 0 auto 0 0;
+    width: var(--progress-width, 0);
+    height: 100% !important;
+  }
   .login-page {
     grid-template-columns: 1fr;
   }
@@ -1336,6 +1679,27 @@ details summary,
   }
 }
 @media (max-width: 560px) {
+  .dmv-feature {
+    grid-template-columns: 1fr;
+  }
+  .dmv-feature .button {
+    grid-column: 1;
+  }
+  .dmv-bank-count {
+    display: none;
+  }
+  .dmv-progress {
+    grid-template-columns: auto 1fr;
+  }
+  .dmv-score {
+    display: none;
+  }
+  .dmv-stage {
+    padding: 2.5rem 1rem;
+  }
+  .dmv-question h1 {
+    font-size: 2.35rem;
+  }
   .beats-dialog-header,
   .beats-dialog-footer {
     padding: 1rem;

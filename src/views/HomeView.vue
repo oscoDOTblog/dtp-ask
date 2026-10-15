@@ -540,6 +540,23 @@ function formatDate(value: string) {
           </button>
         </div>
       </section>
+      <section class="dmv-feature" aria-labelledby="dmv-heading">
+        <div class="dmv-sign" aria-hidden="true">
+          <span>CA</span>
+          <strong>DMV</strong>
+        </div>
+        <div class="dmv-feature-copy">
+          <p class="context-line">California driver study</p>
+          <h2 id="dmv-heading">Know the road before test day.</h2>
+          <p>
+            Work through 100 original practice questions with an explanation and handbook reference
+            after every answer.
+          </p>
+        </div>
+        <RouterLink class="button button--dmv" to="/dmv-california">
+          Start DMV practice
+        </RouterLink>
+      </section>
       <section v-if="recentAttempts.length" class="history-section">
         <div class="section-heading">
           <h2>Recent attempts</h2>
